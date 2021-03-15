@@ -98,7 +98,6 @@ body {
 }
 
 main {
-    // background:linear-gradient(to bottom, #d9d9d9 0%, #d0d0d0 30%, #fff 100%)
     background:#d9d9d9;
 }
 
@@ -120,7 +119,6 @@ main {
 // Header
 .header {
     background:linear-gradient(to right, $blueLight 0%,$blueMedium 50%,$blueDark 100%);
-    // background-image: linear-gradient(90deg, #4dd1d1 0%, #092331 100%);
 
     .container {
         display:flex;
@@ -156,7 +154,7 @@ main {
     grid-template: auto / auto;
     grid-template-areas: 'header';
     gap:20px;
-    padding:20px;
+    padding-top:20px;
     
     .foto {
         width: 100px;

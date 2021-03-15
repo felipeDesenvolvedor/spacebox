@@ -15,6 +15,8 @@ buscarMembros()
     observer.notify(JSON.parse(member.getAttribute('data-json')));
     const checkedFirst = document.querySelector(".grid-member:nth-child(2) .checkded__member");
     checkedFirst.setAttribute('checked', true);  
+}).catch(err => {
+    console.log('Error', err);
 })
 
 const checked = event => {
