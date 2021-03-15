@@ -34,12 +34,24 @@ const renderizarMembro = ({id, foto, nome, cargo, idade}, posicao) => {
     const idadeMembro = document.createElement('span');
           idadeMembro.textContent = idade;
 
+    const nomeLabel  = document.createElement('span');
+          nomeLabel.textContent = "Nome";
+
+    const cargoLabel = document.createElement('span');
+          cargoLabel.textContent = "Cargo";
+
+    const idadeLabel = document.createElement('span');
+          idadeLabel.textContent = "idade";      
+
 
     boxFoto.appendChild(idMembro)
     boxFoto.appendChild(fotoMembro)
 
+    boxDados.appendChild(nomeLabel)
     boxDados.appendChild(nomeMembro)
+    boxDados.appendChild(cargoLabel)
     boxDados.appendChild(cargoMembro)
+    boxDados.appendChild(idadeLabel)
     boxDados.appendChild(idadeMembro)
 
     label.appendChild(boxFoto)
