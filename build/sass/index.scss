@@ -97,6 +97,10 @@ body {
     }
 }
 
+main {
+    background:linear-gradient(to bottom, #d9d9d9 0%, #d0d0d0 30%, #fff 100%)
+}
+
 .overlay {
     @media (max-width:$tablet) { 
         visibility: hidden;
@@ -153,6 +157,13 @@ body {
     display: grid;
     grid-template: auto auto auto / auto auto auto;
     grid-template-areas: 'header header header';
+    
+    .foto {
+        width: 140px;
+        object-fit: cover;
+        height: 140px;
+        border-radius: 100%;
+    }
 }
 
 .grid-member:nth-child(1) .checkded__member {
@@ -161,8 +172,4 @@ body {
 
 .grid-member:nth-child(1) {
     grid-area: header;
-}
-
-img {
-    width: 256px;
 }

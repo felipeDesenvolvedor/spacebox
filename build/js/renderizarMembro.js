@@ -19,7 +19,8 @@ const renderizarMembro = ({id, foto, nome, cargo, idade}, posicao) => {
     
     const fotoMembro  = document.createElement('img');
           fotoMembro.setAttribute('src', `./assets/img/${foto}`);
-    
+          fotoMembro.setAttribute('class', 'foto');  
+          
     const nomeMembro  = document.createElement('span');
           nomeMembro.textContent = nome;
 
