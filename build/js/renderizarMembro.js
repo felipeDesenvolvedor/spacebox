@@ -18,7 +18,7 @@ const renderizarMembro = ({id, foto, nome, cargo, idade}, posicao) => {
           idMembro.textContent = id;  
     
     const fotoMembro  = document.createElement('img');
-          fotoMembro.setAttribute('src', `/assets/img/${foto}`);
+          fotoMembro.setAttribute('src', `./assets/img/${foto}`);
     
     const nomeMembro  = document.createElement('span');
           nomeMembro.textContent = nome;
@@ -50,11 +50,15 @@ const renderizarMembro = ({id, foto, nome, cargo, idade}, posicao) => {
       gridMembros.appendChild(membro);   
 }
 
-const renderizarBoxMembro = ({id, foto, nome, cargo, idade, posicao}) => {
+const renderizarBoxMembro = ({id, foto, nome, cargo, idade}) => {
       const gridMemberOne = document.querySelector('.grid-member') 
             gridMemberOne.remove()
             
       renderizarMembro({'id':id, 'foto':foto, 'nome':nome, 'cargo':cargo, 'idade':idade}, 'prepend');    
 }
 
-export {renderizarMembro, renderizarBoxMembro};
+const insertedFirst = ({id, foto, nome, cargo, idade}) => {   
+      renderizarMembro({'id':id, 'foto':foto, 'nome':nome, 'cargo':cargo, 'idade':idade}, 'prepend');    
+}
+
+export {renderizarMembro, renderizarBoxMembro, insertedFirst};

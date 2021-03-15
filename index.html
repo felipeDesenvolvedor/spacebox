@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/index.css" />
 </head>
 <body>
-   <header>
-       <div><img src="/assets/img/logo.jpeg" alt="logo"></div>
-       <nav>
-           <ul>
-               <li></li>
-               <li></li>
-               <li></li>
-           </ul>
-       </nav>
+   <header class="header">
+       <div class="container">
+           <div><img class="logo" src="./assets/img/logo.png" alt="logo"></div>
+
+           <div class="amburguer js__amburguer">
+                <ul class="menu">
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                </ul>
+            </div>
+           <nav class="nav">
+               <ul class="menu">
+                   <li class="item">empresa</li>
+                   <li class="item">serviço</li>
+                   <li class="item">contato</li>
+               </ul>
+           </nav>
+       </div> 
    </header>
    <main>
     <section class="container">
         <div class="grid__membros">
-            <div class="grid-member">
-                <div>
-                    <span>1</span>
-                    <img src="/assets/img/foto-alberto.jpg">
-                </div>
-                <div>
-                    <span>Alberto</span>
-                    <span>Presidente</span>
-                    <span>20</span>
-                </div>
-                <!-- <input type="radio" name="radio" class="checkded__member"> -->
-            </div>
         </div>
 
 
@@ -40,6 +41,7 @@
 
     </section>
    </main>
+   <div class="overlay"></div>
 </body>
     <script src="./assets/js/bundle.js"></script>
 </html>
