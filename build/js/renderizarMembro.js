@@ -8,10 +8,14 @@ const renderizarMembro = ({id, foto, nome, cargo, idade}, posicao) => {
     const boxFoto = document.createElement('div')
     const boxDados = document.createElement('div')
 
+    const label = document.createElement('label')
+          label.setAttribute('for', `member-${id}`)  
+
     const checkbox = document.createElement('input')
           checkbox.setAttribute('name', 'radio')
           checkbox.setAttribute('type', 'radio') 
           checkbox.setAttribute('class', 'checkded__member')
+          checkbox.setAttribute('id', `member-${id}`)
           checkbox.setAttribute('data-json', JSON.stringify(jsonData))  
     
     const idMembro    = document.createElement('span');
@@ -38,9 +42,12 @@ const renderizarMembro = ({id, foto, nome, cargo, idade}, posicao) => {
     boxDados.appendChild(cargoMembro)
     boxDados.appendChild(idadeMembro)
 
-    membro.appendChild(boxFoto)
-    membro.appendChild(boxDados)
+    label.appendChild(boxFoto)
+    label.appendChild(boxDados)
+
+
     membro.appendChild(checkbox);
+    membro.appendChild(label)
 
     
       if (posicao == 'prepend') {

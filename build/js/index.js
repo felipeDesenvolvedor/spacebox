@@ -13,13 +13,28 @@ buscarMembros()
 .then(() => {
     const member = document.querySelector(".grid-member:nth-child(1) .checkded__member")
     observer.notify(JSON.parse(member.getAttribute('data-json')));
+    const checkedFirst = document.querySelector(".grid-member:nth-child(2) .checkded__member");
+    checkedFirst.setAttribute('checked', true);  
 })
 
-const handleChecked = () => {
-    const gridMembors = document.querySelector('.grid__membros')
+const checked = event => {
 
+    const checkeds = document.querySelectorAll(".grid-member:nth-child(1n + 2) .checkded__member");
+
+    checkeds.forEach(checked => {
+        checked.removeAttribute('checked');
+    })
+
+    event.target.setAttribute('checked', true);
+}
+
+const handleChecked = () => {
+    const gridMembors  = document.querySelector('.grid__membros')
+           
         gridMembors.addEventListener('click', event => {
             if(event.target.className === 'checkded__member') {
+                
+                checked(event)
                 observer.unsubscribe(insertedFirst)
                 observer.notify(JSON.parse(event.target.getAttribute('data-json')));
             }
@@ -27,6 +42,8 @@ const handleChecked = () => {
 
         gridMembors.addEventListener('change', event => {
             if(event.target.className === 'checkded__member' && event.target.checked) {
+                
+                checked(event)
                 observer.unsubscribe(insertedFirst)
                 observer.notify(JSON.parse(event.target.getAttribute('data-json')));
             }
