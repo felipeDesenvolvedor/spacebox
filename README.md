@@ -1,6 +1,6 @@
 <h1> Aplicação spacebox </h1>
 
-<h2>Siga o passo a passo para testar a aplicação<h2>
+<h3>Siga o passo a passo para testar a aplicação<h3>
   
   <ul>
     <li>Realizar o clone do projeto </li>
